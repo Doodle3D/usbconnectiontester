@@ -27,7 +27,7 @@ endef
 
 define Package/usbconnectiontester/install
 	$(INSTALL_DIR) $(1)/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/usbconnectiontester $(1)/bin/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/usbconnectiontester.bin $(1)/bin/
 
 endef
 
