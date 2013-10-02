@@ -1,0 +1,15 @@
+#!/bin/sh /etc/rc.common
+
+# start after networking
+START=22
+
+#LOGGER="logger -s -t autowifi -p 6"
+
+boot() {	
+	#$LOGGER "Start USB connection tester..."
+	echo "Start USB connection tester..."
+  /bin/usbconnectiontester.bin > /tmp/usbconnectiontester.log 2> /tmp/usbconnectiontester.log &
+}
+
+#start() {
+#}

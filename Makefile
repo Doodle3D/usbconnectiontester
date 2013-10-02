@@ -28,7 +28,8 @@ endef
 define Package/usbconnectiontester/install
 	$(INSTALL_DIR) $(1)/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/usbconnectiontester.bin $(1)/bin/
-
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/usbconnectiontester_init $(1)/etc/init.d/usbconnectiontester  # copy directly to init dir (required for post-inst enabling)
 endef
 
 $(eval $(call BuildPackage,usbconnectiontester))
